@@ -14,7 +14,7 @@ export default class UserIndex extends Component {
                     <span>Please click the user you want to modify.</span>
                     <div className="row user-index-toolbar">
                         <div className="col-lg-12">
-                            <Link className="btn btn-primary float-right" to={`/user/new`}>New User</Link>
+                            <Link className="btn btn-success float-right" to={`/user/create`}>Create User</Link>
                         </div>
                     </div>
                     <div class="row">
