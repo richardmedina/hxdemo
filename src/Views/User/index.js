@@ -7,7 +7,7 @@ export default class UserIndex extends Component {
         return (
         <div>
             <h1>User Index</h1>
-            <Link className="nav-link" to={`/user/new}`}>User</Link>
+            <Link className="nav-link" to={`/user/new`}>User</Link>
         </div>);
     }
 }
