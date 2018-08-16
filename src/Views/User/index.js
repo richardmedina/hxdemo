@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import UserItemList from '../../Components/UserItemList'
+
 export default class UserIndex extends Component {
     render ()
     {
         return (
-        <div>
-            <h1>User Index</h1>
-            <Link className="nav-link" to={`/user/new`}>User</Link>
-        </div>);
+            
+            <div className="row">
+                <div className="col-lg-12">
+                    <h1>User Index</h1>
+                    <span>Please click the user you want to modify.</span>
+                    <div className="row user-index-toolbar">
+                        <div className="col-lg-12">
+                            <Link className="btn btn-primary float-right" to={`/user/new`}>New User</Link>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div className="col-lg-12">
+                            <UserItemList />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
     }
 }

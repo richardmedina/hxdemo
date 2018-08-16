@@ -3,3 +3,16 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.user-index-toolbar
+{
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background: #ddd; 
+}
+
+
+.user-list {
+  padding-top: 10px;  
+}
