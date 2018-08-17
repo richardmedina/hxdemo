@@ -17,7 +17,7 @@ export default class UserIndex extends Component {
                             <Link className="btn btn-success float-right" to={`/user/create`}>Create User</Link>
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
                         <div className="col-lg-12">
                             <UserItemList />
                         </div>

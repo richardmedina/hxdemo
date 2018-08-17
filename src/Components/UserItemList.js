@@ -1,54 +1,42 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { connect } from 'react-redux';
 
 import UserItem from './UserItem';
+import { addToUsers, removeFromUsers} from '../ActionCreators/Users';
 
-
-export default class UserItemList extends Component 
+const UserItemList = ({users, removeUser}) =>  
 {
+    return (
+        <div className="user-list list-group">
+            {users && users.data && users.data.map ((item, index) => <UserItem key={item.id} item={item} onRemoveClicked={removeUser}/>)}
+        </div>
+    );
+}
 
-    constructor ()
-    {
-        super ();
+const mapStateToProps = state => {
+    return { 
+      users: state.users 
+    };
+  }
+  
+const mapDispatchToProps = dispatch => {
+    return {
+        refreshUsers ()
+        {
+            dispatch (this.refreshUsers())
+        },
 
-        this.state = {
-            users : {
-                "page":1,
-                "per_page":3,
-                "total":12,
-                "total_pages":4,
-                "data":[
-                    {
-                        "id":1,
-                        "first_name":"George",
-                        "last_name":"Bluth",
-                        "avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
-                    },
-                    {
-                        "id":2,
-                        "first_name":"Janet",
-                        "last_name":"Weaver",
-                        "avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
-                    },
-                    {
-                        "id":3,
-                        "first_name":"Emma",
-                        "last_name":"Wong",
-                        "avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"
-                    }
-                ]
-            }
-        };
+        removeUser (user)
+        {
+            dispatch (removeFromUsers (user));
+        },
 
-        this.setState (this.state);
-    }
-
-    render () 
-    {
-        return (
-            <div className="user-list list-group">
-            {this.state.users.data.map ((item, index) => <UserItem item={item} />)}
-            </div>
-        );
+        addUser (user)
+        {
+            dispatch (addToUsers(user))
+        }
     }
 }
+
+
+export default connect (mapStateToProps, mapDispatchToProps) (UserItemList);

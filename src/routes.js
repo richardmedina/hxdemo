@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-
+import store from './store'
+import { Provider } from 'react-redux';
 // Components
 
 import App from './App';
