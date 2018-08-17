@@ -7,7 +7,7 @@ class Content extends Component
     {
         const { body } = this.props;
         return (
-            <div>
+            <div className="view-container">
                 {body}
             </div>
         );

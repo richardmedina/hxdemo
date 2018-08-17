@@ -1,7 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import store from './store'
-import { Provider } from 'react-redux';
 // Components
 
 import App from './App';
@@ -9,7 +7,7 @@ import HomeIndex from './Views/Home'
 import UserIndex from './Views/User';
 import UserCreate from './Views/User/create';
 import UserUpdate from './Views/User/update';
-import Page404 from './Views/Pages/Page404';
+import Page404 from './Views/Pages/page404';
 
 const AppRoutes = () => 
     <App>

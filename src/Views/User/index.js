@@ -10,8 +10,8 @@ export default class UserIndex extends Component {
             
             <div className="row">
                 <div className="col-lg-12">
-                    <h1>User Index</h1>
-                    <span>Please click the user you want to modify.</span>
+                    <h1>Current User List</h1>
+                    <span>Please click on any below user to modify it.</span>
                     <div className="row user-index-toolbar">
                         <div className="col-lg-12">
                             <Link className="btn btn-success float-right" to={`/user/create`}>Create User</Link>

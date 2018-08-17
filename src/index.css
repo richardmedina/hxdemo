@@ -4,6 +4,10 @@ body {
   font-family: sans-serif;
 }
 
+.view-container {
+  padding: 10px;
+}
+
 .user-index-toolbar
 {
   padding-top: 10px;
