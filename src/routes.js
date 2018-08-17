@@ -9,7 +9,7 @@ import HomeIndex from './Views/Home'
 import UserIndex from './Views/User';
 import UserCreate from './Views/User/create';
 import UserUpdate from './Views/User/update';
-import Page404 from './Views/Pages/page404';
+import Page404 from './Views/Pages/Page404';
 
 const AppRoutes = () => 
     <App>
