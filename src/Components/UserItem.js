@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default class UserItem extends Component 
 {
-    render () 
+    render ()
     {
         let { id, first_name, last_name, avatar } = this.props.item;
         return (
@@ -14,7 +14,10 @@ export default class UserItem extends Component
                         <Link 
                             style={{display: 'block'}}
                             className="" 
-                            to={`/user/update/${id}`}>
+                            to={{
+                                pathname: `/user/update/${id}`,
+                                props: this.props.item
+                            }}>
                             <img src={avatar} alt='userItem' width="50px" className="img img-responsive" />
                             <span className="useritemfullname">
                                 {`${first_name} ${last_name}`}

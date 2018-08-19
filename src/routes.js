@@ -14,7 +14,7 @@ const AppRoutes = () =>
         <Switch>
             <Route exact path="/user" component={UserIndex} />
             <Route exact path="/user/create" component={UserCreate} />
-            <Route exact path="/user/update/:id" component={UserUpdate} />
+            <Route exact path="/user/update/:id" component={UserCreate} />
             <Route exact path="/" component={HomeIndex} />
             <Route component={Page404} />
         </Switch>

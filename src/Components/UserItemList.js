@@ -9,6 +9,13 @@ const UserItemList = ({users, removeUser}) =>
     return (
         <div className="user-list list-group">
             {users && users.data && users.data.map ((item, index) => <UserItem key={item.id} item={item} onRemoveClicked={removeUser}/>)}
+
+            {/* <Modal 
+                id="confirmDeletionModal" 
+                title="Confirmation" 
+                message="Are you sure you want to remove this item?" 
+                OnOkClicked={this.handleModalClick.bind (this)}
+                /> */}
         </div>
     );
 }
@@ -34,6 +41,10 @@ const mapDispatchToProps = dispatch => {
         addUser (user)
         {
             dispatch (addToUsers(user))
+        },
+        updateUser (user)
+        {
+            dispatch (this.updateUser(user))
         }
     }
 }

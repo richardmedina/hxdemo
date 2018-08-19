@@ -25,6 +25,29 @@ const reducer = (state, action) => {
                 }
             }
         break;
+
+        case "USER_ADD":
+            newState = {
+                ...state,
+                users: {
+                    ...state.users,
+                    data: state.users.data.concat (action.user)
+                }
+            }
+        break;
+
+        case "USER_UPDATE":
+        newState = {
+            ...state,
+            users: {
+                ...state.users,
+                data: state.users.data.concat (action.user)
+            }
+        }
+    break;
+
+
+
         default:
             newState = state;
             break;

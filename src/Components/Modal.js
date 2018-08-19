@@ -49,11 +49,11 @@ export default class Modal extends Component {
             Launch demo modal
             </button> */}
 
-            <div className="modal fade" id={this.state.id} tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id={this.state.id} tabIndex="-1" role="dialog" aria-labelledby={`label${this.state.id}`} aria-hidden="true">
             <div className="modal-dialog" role="document">
                 <div className="modal-content">
                 <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalLabel">{this.state.title}</h5>
+                    <h5 className="modal-title" id={`label${this.state.id}`}>{this.state.title}</h5>
                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -63,7 +63,7 @@ export default class Modal extends Component {
                 </div>
                 <div className="modal-footer">
                     <button type="button" className="btn btn-secondary" data-dismiss="modal">{this.state.CancelButtonText}</button>
-                    <button type="button" onClick={this.handleOkClick.bind(this)} className="btn btn-success">{this.state.OkButtonText}</button>
+                    <button type="button" onClick={this.handleOkClick.bind(this)} data-dismiss="modal" className="btn btn-success">{this.state.OkButtonText}</button>
                 </div>
                 </div>
             </div>

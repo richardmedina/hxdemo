@@ -31,4 +31,13 @@ function removeFromUsers (user)
 }
 
 
-export { refreshUsers, addToUsers, removeFromUsers };
+function updateUser (user)
+{
+    return {
+        type: "USER_UPDATE",
+        user
+    };
+}
+
+
+export { refreshUsers, addToUsers, updateUser, removeFromUsers };

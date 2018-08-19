@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export default class UserUpdate extends Component {
     render ()
     {
+        console.log (this.state);
         return (
         <div>
             <h1>User Edit</h1>
