@@ -1,18 +1,35 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import UserEdit from './edit';
+// import { mapStateToProps, mapDispatchToProps } from '../../Mappers/UserMapper';
+// import { connect } from 'react-redux';
 
-export default class UserUpdate extends Component {
-    render ()
-    {
-        console.log (this.state);
-        return (
-        <div>
-            <h1>User Edit</h1>
-            <div className="row">
-                <div className="col-lg-12">
-                    <Link className="btn btn-link" to={`/user`}>Go Back</Link>
-                </div>
-            </div>
-        </div>);
-    }
-}
+
+// class UserUpdate extends UserEdit  {
+    
+//     constructor (props)
+//     {
+//         super ();        
+//         console.log ("update props ctor: " + JSON.stringify(props));
+
+//         let p = props.location.extraProps;
+
+//         if (p && p.item !== "undefined") 
+//         {
+//             this.state = {...p, okButtonText: 'Update'};
+//         } else 
+//         {
+//             this.state = {
+//                 user: {
+//                     id : '',
+//                     first_name: '',
+//                     last_name: '',
+//                     avatar: '',
+//                 },
+//                 okButtonText: 'Create'
+//             };
+//         }
+//     }
+// }
+
+// export default connect (mapStateToProps, mapDispatchToProps) (UserUpdate); 
+
+// //export default UserUpdate;

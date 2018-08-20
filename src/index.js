@@ -12,8 +12,6 @@ import { refreshUsers } from './ActionCreators/Users';
 // Routes
 import AppRoutes from './routes'
 
-store.dispatch (refreshUsers ());
-
 ReactDOM.render(
     <Provider store={store}>
         <Router>

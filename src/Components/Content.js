@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Content extends Component 
+const Content = ({body}) =>
 {
 
-    render () 
-    {
-        const { body } = this.props;
+
         return (
             <div className="view-container">
                 {body}
             </div>
         );
-    }
+
 } 
 
 export default Content;

@@ -16,7 +16,6 @@ body {
   background: transparent; 
 }
 
-
 .user-list {
   padding-top: 10px;  
 }
@@ -24,4 +23,8 @@ body {
 .useritemfullname
 {
   padding-left: 10px;
+}
+
+.modal{
+  overflow: visible !important;
 }
