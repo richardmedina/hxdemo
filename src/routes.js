@@ -6,7 +6,7 @@ import App from './App';
 import HomeIndex from './Views/Home'
 import UserIndex from './Views/User';
 import UserEdit from './Views/User/edit';
-import Page404 from './Views/Pages/page404';
+import Page404 from './Views/Pages/Page404';
 
 const AppRoutes = () => 
     <App>
