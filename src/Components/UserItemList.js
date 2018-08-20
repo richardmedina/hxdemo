@@ -16,10 +16,10 @@ class UserItemList extends Component
         this.state = {
             modalMessage: "",
             showErrorMessage: false,
-            screenState: "loading"
+            screenState: "initial"
         };
         
-        props.refreshUserList (this.successCallback.bind(this), this.errorCallback.bind(this));
+        //props.refreshUserList (this.successCallback.bind(this), this.errorCallback.bind(this));
     }
 
     

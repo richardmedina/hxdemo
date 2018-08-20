@@ -6,7 +6,6 @@ import UserItemList from '../../Components/UserItemList'
 export default class UserIndex extends Component {
     render ()
     {
-        
         return (
             
             <div className="row">

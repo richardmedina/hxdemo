@@ -11,8 +11,6 @@ class UserEdit extends Component {
     constructor (props)
     {
         super (props);
-        console.log ("update props ctor: " + JSON.stringify(this.props));
-
 
         let p = props.location.extraProps;
 
@@ -36,16 +34,6 @@ class UserEdit extends Component {
             };
         }
     }
-
-    // handleBlur(event) {
-    //     this.setState({
-    //         ...this.state,
-    //         user: {
-    //             ...this.state.user,
-    //             avatar: event.target.value
-    //         }
-    //     });
-    // }
 
     handleImageError (event)
     {
@@ -72,27 +60,6 @@ class UserEdit extends Component {
         console.log ("render state: " + JSON.stringify(this.state));
 
         let message;
-
-        // if (this.state.screenState === "created")
-        // {
-        //     //return <Redirect push to="/user" />;
-        //     message = <div className="alert alert-success" role="alert">
-        //         User has been created.
-        //     </div>;
-        // }
-        // if (this.state.screenState === "updated")
-        // {
-        //     //return <Redirect push to="/user" />;
-        //     message = <div className="alert alert-success" role="alert">
-        //         User has been updated.
-        //     </div>;
-        // }  
-        // else if (this.state.screenState === "error")
-        // {
-        //     message = <div className="alert alert-danger" role="alert">
-        //         Error saving user.
-        //     </div>;
-        // }
 
         switch (screenState)
         {
@@ -226,6 +193,5 @@ class UserEdit extends Component {
         });
     } 
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps) (UserEdit);

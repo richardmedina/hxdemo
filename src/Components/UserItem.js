@@ -42,7 +42,6 @@ export default class UserItem extends Component
                         </Link>
                     </div>
                     <div className="col-lg-4">
-                        {/* <button className="btn btn-danger float-right" onClick={ this.handleRemove.bind (this)}>Remove</button> */}
                         <button className="btn btn-danger float-right" data-toggle="modal" data-target={`#removeModal`} onClick={this.removeClick.bind(this)}>Remove</button>
                     </div>
                 </div>
